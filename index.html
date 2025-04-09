@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Sam | Web3 Portfolio</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cursor Follow Effect -->
+    <div class="cursor-follow"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="logo">Senior<span>Sam</span></a>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#blockchain" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="wallet-connect">
+                <a href="https://t.me/senior_sam2"><button class="connect-btn">Hire Me</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title glitch" data-text="SENIOR SAM">SENIOR SAM</h1>
+                <p class="hero-subtitle">Your Go-to Community Manager.... I'm all about building vibrant, engaged communities from the ground up! With my strategic shilling and raiding expertise, I ensure your project gets the attention it deserves.</p>
+                <div class="cta-buttons">
+                    <a href="t.me/seniorsamsei " class="btn btn-primary">Proof Of Work</a>
+                    <a href="https://t.me/senior_sam2" class="btn btn-outline">Hire Me</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://x.com/seniorsam_" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://t.me/senior_sam2" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    <a href="https://discord.com/users/seniorsa" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-3d">
+                    <div class="profile-container">
+                        <div class="profile-image"></div>
+                    </div>
+                </div>
+                <div class="particles-container" id="particles-js"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">The <span class="highlight">Web3</span> Prodigy</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="public/assets/images/img1.jpg" alt="Senior Sam Profile">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="number">Web3</span>
+                        <span class="text">Prodigy<br></span>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <p class="about-description">I'm Senior Sam also known as "The Web3 Prodigy". A Web3 Community Manager | Growth Strategist | Believer in Sei
+                        I've worked across top Solana based and other blockchain projects like Cat³Poker, GrinGold, Deta Protocol, and BabyBoomToken.
+                        From modding and raiding to hosting Twitter Spaces and ambassadorships—I'm all about pushing value and building real momentum in Web3.
+                        
+                        Whether it's driving hype, helping teams scale, or mentoring newcomers, I bring the energy, the experience, and the vision to help Web3 projects thrive.</p>
+                    
+                    
+                    <a href="https://t.me/senior_sam2" class="btn btn-primary download-cv"> Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="moderator">Moderator</button>
+                <button class="filter-btn" data-filter="ambasador">Ambassador</button>
+                <button class="filter-btn" data-filter="cm">Community Manager</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="moderator">    
+                    <div class="project-image">
+                        <img src="public/assets/images/cat3poker.jpg" alt="DeFi Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://x.com/cat3poker" class="project-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Moderator</span>
+                        </div>
+                        <h3 class="project-title">Cat³poker</h3>
+                        <p class="project-description">Moderated community channels, enforced guidelines, fostered engagement, and supported Cat³poker project initiatives and governance.</p>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="ambasador">
+                    <div class="project-image">
+                        <img src="public/assets/images/gingold.jpg" alt="NFT Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://x.com/TheGrinGoldGGLD" class="project-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Ambassador</span>
+                        </div>
+                        <h3 class="project-title">GrinGold</h3>
+                        <p class="project-description">Represented the project, engaged with the community, promoted initiatives, and facilitated partnerships within the Web3 ecosystem.</p>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="cm">
+                    <div class="project-image">
+                        <img src="public/assets/images/paw.jpg" alt="dApp Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://x.com/DPaws33" class="project-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Community Manager</span>
+                        </div>
+                        <h3 class="project-title">Diamondpaws</h3>
+                        <p class="project-description">Managed community engagement, moderated discussions, organized events, and nurtured relationships to support project growth and user retention.</p>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="project-card" data-category="moderator">
+                    <div class="project-image">
+                        <img src="public/assets/images/prepus.jpg" alt="DAO Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://x.com/PEPRUS_Solana?t=8H0J2dAazyR3QShhKH9Guw&s=09" class="project-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Moderator</span>
+                        </div>
+                        <h3 class="project-title">PEPRUS</h3>
+                        <p class="project-description">Monitored community discussions, enforced guidelines, resolved issues, and ensured a safe, engaging environment for users.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="t.me/seniorsamsei " class="btn btn-primary">See All My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blockchain Section -->
+    <section id="blockchain" class="blockchain">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Web3 Expertise</span>
+            </div>
+            <div class="blockchain-content">
+                
+                <div class="blockchain-services">
+                    <h3>My Services</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Community management and moderation </h4>
+                            <p>As an experienced and qualified community manager and moderator for blockchain projects, I engage with members, moderate discussions, organize events, provide support and feedback, and share important updates.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h4>Raiding</h4>
+                            <p>As a raider  for blockchain projects, I organize campaigns to flood social media and forums especially X with engaging content and increase in visibility. I actively promote the project through posts, memes, and messages to generate excitement and attract supporters.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Shilling</h4>
+                            <p>As a shiller, I interact with potential users to build trust, create compelling content that highlights the project's features, and monitor the effectiveness of my efforts to adjust strategies as needed. These activities are vital for raising awareness and fostering a strong community around the project.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4>Ambassadorships</h4>
+                            <p>As an ambassador for blockchain projects, my primary role is to represent the project in the community and beyond. I engage with members, promote the project on social media, and develop content that highlights its value. Additionally, I network with influencers, gather community feedback, and represent the project at conferences and meetups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+            </div>
+            <div class="contact-content-centered">
+                <div class="contact-info">
+                    <a href="https://x.com/seniorsam_" class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Twitter</h3>
+                            <p>@seniorsam_</p>
+                        </div>
+                    </a>
+                    <a href="https://t.me/senior_sam2" class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telegram</h3>
+                            <p>@senior_sam2</p>
+                        </div>
+                    </a>
+                    <a href="https://discord.com/users/seniorsam2" class="contact-item">
+                        <div class="contact-icon">
+                      <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Discord</h3>
+                            <p>@seniorsam2</p>
+                        </div>
+                    </a>
+                    <div class="contact-socials">
+                        <a href="https://x.com/seniorsam_" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://t.me/senior_sam2" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="https://discord.com/users/seniorsam2 " class="social-icon"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Senior<span>Sam</span></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blockchain">services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://twitter.com/seniorsam_" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://t.me/senior_sam2" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    <a href="https://discord.com/users/seniorsam2" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Senior Sam. All rights reserved.</p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/web3.js"></script>
+</body>
+</html> 
