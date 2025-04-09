@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize preloader
     initPreloader();
     
-    // Initialize custom cursor
-    initCursor();
+    // Only initialize cursor on non-touch devices
+    if (!isTouchDevice()) {
+        initCursor();
+    }
     
     // Initialize navbar effects
     initNavbar();
@@ -24,9 +26,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize contact form
     initContactForm();
     
-    // Initialize particles
+    // Initialize particles with reduced particles on mobile
     initParticles();
+    
+    // Add mobile specific handlers
+    if (isTouchDevice()) {
+        initMobileOptimizations();
+    }
 });
+
+// Check if the device is touch-enabled
+function isTouchDevice() {
+    return (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+}
+
+// Mobile-specific optimizations
+function initMobileOptimizations() {
+    // Add 'touch-device' class to body for CSS targeting
+    document.body.classList.add('touch-device');
+    
+    // Add active states for touch interactions
+    const interactiveElements = document.querySelectorAll('.btn, .social-icon, .project-card, .service-card, .contact-item');
+    
+    interactiveElements.forEach(el => {
+        el.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        }, { passive: true });
+        
+        el.addEventListener('touchend', function() {
+            this.classList.remove('touch-active');
+        }, { passive: true });
+    });
+    
+    // Optimize animations for mobile devices
+    if (window.innerWidth < 768) {
+        const animationElements = document.querySelectorAll('.profile-3d, .profile-container');
+        
+        animationElements.forEach(el => {
+            el.style.animationDuration = '30s'; // Slow down animations for better performance
+        });
+    }
+}
 
 // Preloader
 function initPreloader() {
@@ -298,14 +340,18 @@ function initContactForm() {
     });
 }
 
-// Initialize particles.js
+// Initialize particles.js with optimized config for mobile
 function initParticles() {
     if (typeof particlesJS === 'undefined' || !document.getElementById('particles-js')) return;
+    
+    // Adjust particle count based on device
+    const particleCount = isTouchDevice() ? 30 : 80;
+    const enableInteractivity = !isTouchDevice();
     
     particlesJS('particles-js', {
         particles: {
             number: {
-                value: 80,
+                value: particleCount,
                 density: {
                     enable: true,
                     value_area: 800
@@ -326,7 +372,7 @@ function initParticles() {
                 random: true,
                 anim: {
                     enable: true,
-                    speed: 1,
+                    speed: isTouchDevice() ? 0.5 : 1, // Slower animation on mobile
                     opacity_min: 0.1,
                     sync: false
                 }
@@ -336,7 +382,7 @@ function initParticles() {
                 random: true,
                 anim: {
                     enable: true,
-                    speed: 2,
+                    speed: isTouchDevice() ? 1 : 2, // Slower animation on mobile
                     size_min: 0.1,
                     sync: false
                 }
@@ -350,7 +396,7 @@ function initParticles() {
             },
             move: {
                 enable: true,
-                speed: 1,
+                speed: isTouchDevice() ? 0.5 : 1, // Slower movement on mobile
                 direction: 'none',
                 random: true,
                 straight: false,
@@ -367,11 +413,11 @@ function initParticles() {
             detect_on: 'canvas',
             events: {
                 onhover: {
-                    enable: true,
+                    enable: enableInteractivity,
                     mode: 'grab'
                 },
                 onclick: {
-                    enable: true,
+                    enable: enableInteractivity,
                     mode: 'push'
                 },
                 resize: true
