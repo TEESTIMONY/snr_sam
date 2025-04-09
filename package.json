@@ -1,1 +1,13 @@
- 
+{
+  "name": "senior-sam-portfolio",
+  "version": "1.0.0",
+  "description": "Senior Sam's Web3 Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo No build step needed for static site"
+  },
+  "dependencies": {
+    "serve": "^14.0.1"
+  }
+} 
